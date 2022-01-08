@@ -11,7 +11,7 @@ a {
   text-decoration: none; }
 
 body {
-  cursor: url("img/bug.png"), pointer;
+  cursor: url("img/hook.png"), pointer;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -21,7 +21,7 @@ body {
   background-color: black; }
   body h1 {
     color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font: 32px/1 "Press Start 2P"; }
     body h1 span {
       color: red; }
@@ -29,21 +29,25 @@ body {
     width: 70%;
     height: 70vh;
     background: url(img/background.jpg) no-repeat center/cover;
-    position: relative; }
-    body .game .game-guide button {
+    position: relative;
+    border-radius: 4px; }
+    body .game .game-guide .start {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       margin-top: 10px;
       margin-left: 10px;
-      font: 24px/1 "Press Start 2P";
+      padding: 20px 40px;
       color: blue;
       border: none;
       background: #fff;
-      padding: 20px;
       border: 10px solid blue;
+      font: 24px/1 "Press Start 2P";
       cursor: pointer; }
+      body .game .game-guide .start:hover strong {
+        display: block;
+        transform: scale(1.2); }
     body .game .game-guide .game-info {
       position: absolute;
       top: 0;
@@ -67,22 +71,20 @@ body {
       body .game .game-info span {
         font: 24px/1 "Press Start 2P"; }
   body .pop-up {
-    opacity: 0;
     position: fixed;
     width: 40%;
     height: 30%;
-    background-color: #fff;
-    border-radius: 4px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; }
+    background: rgba(255, 255, 255, 0.822);
+    border-radius: 20px;
+    display: block;
+    text-align: center; }
     body .pop-up span {
+      display: block;
       font: 24px/1 "Press Start 2P";
-      margin-bottom: 20px; }
+      margin: 50px 0; }
     body .pop-up button {
       border: none;
-      background: #fff;
+      background: none;
       font: 24px/1 "Press Start 2P";
       cursor: pointer;
       color: blue; }
@@ -90,5 +92,7 @@ body {
         font-size: 30px; }
       body .pop-up button:hover {
         transform: scale(1.2); }
+  body .hide {
+    display: none; }
 
 /*# sourceMappingURL=style.css.map */

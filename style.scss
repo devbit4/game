@@ -14,10 +14,10 @@ a{
 }
 
 body{
-    cursor: url('img/bug.png'), pointer;
+    cursor: url('img/hook.png'), pointer;
     h1{
         color: #fff;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         font: 32px/1 "Press Start 2P";
         span{
             color: red;
@@ -35,22 +35,26 @@ body{
         height: 70vh;
         background: url(img/background.jpg) no-repeat center/cover;
         position: relative;
+        border-radius: 4px;
         .game-guide{
-
-            button{
+           .start{
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%,-50%);
                 margin-top: 10px;
                 margin-left: 10px;
-                font: 24px/1 "Press Start 2P";
+                padding: 20px 40px;
                 color: blue;
                 border: none;
                 background: #fff;
-                padding:20px;
                 border: 10px solid blue;
+                font: 24px/1 "Press Start 2P";
                 cursor: pointer;
+                &:hover strong{
+                    display: block;
+                    transform: scale(1.2);
+                }
 
             }
             .game-info{
@@ -62,6 +66,7 @@ body{
                     padding: 10px 20px;
                     border-radius: 10px;
                     margin-bottom: 10px;
+
                 }
                 .time{
                     text-align: center;
@@ -83,23 +88,21 @@ body{
         }
     }
     .pop-up{
-        opacity: 0;
         position: fixed;
         width: 40%;
         height: 30%;
-        background-color: #fff;
-        border-radius: 4px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        background: rgba(255, 255, 255, 0.822);
+        border-radius: 20px;
+        display: block;
+        text-align: center;
         span{
+            display: block;
             font: 24px/1 "Press Start 2P";
-            margin-bottom: 20px;
+            margin: 50px 0;
         }
         button{
             border: none;
-            background: #fff;
+            background: none;
             font: 24px/1 "Press Start 2P";
             cursor: pointer;
             color: blue;
@@ -111,6 +114,9 @@ body{
             }
 
         }
+    }
+    .hide{
+        display: none;
     }
 }
 
