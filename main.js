@@ -1,8 +1,12 @@
 const space = document.querySelector(".game");
 const cal = space.getBoundingClientRect();
 const start = document.querySelector(".start");
+const stop = document.querySelector(".stop");
 const time = document.querySelector(".time");
+const pop = document.querySelector(".pop-up");
+
 const lastTime = 5;
+
 
 console.log(time.innerHTML)
 
@@ -34,13 +38,13 @@ function random(min, max) {
     return Math.random() * (max - min) + min;
 }
 
-spacing();
-
 // 게임시작
 
 start.addEventListener("click", () => {
     start.style.display = "none";
     timer();
+    spacing();
+    stop.classList.remove("stop-hide");
 
 })
 
@@ -52,13 +56,19 @@ function timer() {
     let sec = "";
 
     let x = setInterval(function () {
+        --last;
         min = parseInt(last / 60);
         sec = last % 60;
         time.innerHTML = min + ":" + sec;
-        last--;
-        if (last < 0) {
+        if (last <= 0) {
             clearInterval(x);
-            time.innerHTML = "over";
+            time.innerHTML = "OVER";
         }
     }, 1000);
 }
+
+// 게임중지
+
+stop.addEventListener("click", () => {
+    pop.classList.remove("hide");
+})
