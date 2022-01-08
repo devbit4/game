@@ -39,6 +39,7 @@ body{
         .game-guide{
            .start{
                 position: absolute;
+                z-index: 2;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%,-50%);
@@ -59,16 +60,17 @@ body{
             }
             .game-info{
                 position: absolute;
+                z-index: 2;
                 top: 0;
                 right: 0;
-                .game-score{
+                .time{
                     background: #000;
                     padding: 10px 20px;
                     border-radius: 10px;
                     margin-bottom: 10px;
 
                 }
-                .time{
+                .game-score{
                     text-align: center;
                     background: orange;
                     padding: 10px 20px;
