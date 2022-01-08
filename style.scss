@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul,li,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+body{
+    cursor: url('img/bug.png'), pointer;
+    h1{
+        color: #fff;
+        margin-bottom: 10px;
+        font: 32px/1 "Press Start 2P";
+        span{
+            color: red;
+        }
+    }
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    .game{
+        width: 70%;
+        height: 70vh;
+        background: url(img/background.jpg) no-repeat center/cover;
+        position: relative;
+        .game-guide{
+
+            button{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                margin-top: 10px;
+                margin-left: 10px;
+                font: 24px/1 "Press Start 2P";
+                color: blue;
+                border: none;
+                background: #fff;
+                padding:20px;
+                border: 10px solid blue;
+                cursor: pointer;
+
+            }
+            .game-info{
+                position: absolute;
+                top: 0;
+                right: 0;
+                .game-score{
+                    background: #000;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                    margin-bottom: 10px;
+                }
+                .time{
+                    text-align: center;
+                    background: orange;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                }
+            }
+        }
+        .game-info{
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            margin-right: 10px;
+            margin-top: 10px;
+            span{
+                font: 24px/1 "Press Start 2P";
+            }
+        }
+    }
+    .pop-up{
+        opacity: 0;
+        position: fixed;
+        width: 40%;
+        height: 30%;
+        background-color: #fff;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        span{
+            font: 24px/1 "Press Start 2P";
+            margin-bottom: 20px;
+        }
+        button{
+            border: none;
+            background: #fff;
+            font: 24px/1 "Press Start 2P";
+            cursor: pointer;
+            color: blue;
+            i{
+                font-size: 30px;
+            }
+            &:hover{
+                transform: scale(1.2);
+            }
+
+        }
+    }
+}
+
+
