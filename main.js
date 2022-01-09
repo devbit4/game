@@ -14,7 +14,6 @@ let points = 5;
 
 // 게임준비
 function spacing() {
-    space.innerHTML = '';
     objects('shark', 5, 'img/shark.png');
     objects('fish', 5, 'img/fish.png');
 }
@@ -84,7 +83,7 @@ stop.addEventListener('click', () => {
     gameStop();
 });
 function gameStop() {
-
+    space.innerHTML = '';
     space.classList.remove("active");
     pop.classList.remove('hide');
     clearInterval(clock);
