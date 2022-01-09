@@ -92,4 +92,19 @@ replay.addEventListener('click', () => {
     gameStart();
 });
 
-
+// 점수내기
+space.addEventListener('click', (e) => {
+    if (e.target.className === 'fish') {
+        e.target.remove();
+        points--;
+        score.innerHTML = points;
+        if (points === 0) {
+            gameStop();
+            message.innerHTML = 'You Win!';
+            console.log('win');
+        }
+    } else if (e.target.className == 'shark') {
+        gameStop();
+        message.innerHTML = 'You Lost!';
+    }
+});
