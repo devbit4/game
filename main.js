@@ -8,7 +8,7 @@ const replay = document.querySelector('.replay');
 const score = document.querySelector('.game-score');
 const fishes = document.querySelectorAll('.fish');
 const message = document.querySelector('.message');
-const lastTime = 10;
+const lastTime = 5;
 let clock;
 let points = 5;
 
@@ -49,6 +49,8 @@ start.addEventListener('click', () => {
 });
 
 function gameStart() {
+    space.classList.add("active");
+    time.innerHTML = 'Ready';
     timer();
     spacing();
     score.innerHTML = points;
@@ -58,8 +60,9 @@ function gameStart() {
 
 function timer() {
     let last = lastTime;
-    let min = '';
-    let sec = '';
+    let min = parseInt(last / 60);
+    let sec = last % 60;
+    time.innerHTML = min + ':' + sec;
 
     clock = setInterval(function () {
         --last;
@@ -68,7 +71,7 @@ function timer() {
         time.innerHTML = min + ':' + sec;
         if (last <= 0) {
             clearInterval(clock);
-            time.innerHTML = 'OVER';
+            // time.innerHTML = 'OVER';
             message.innerHTML = 'You Lost!';
             gameStop();
         }
@@ -81,6 +84,8 @@ stop.addEventListener('click', () => {
     gameStop();
 });
 function gameStop() {
+
+    space.classList.remove("active");
     pop.classList.remove('hide');
     clearInterval(clock);
     time.innerHTML = 'over';
@@ -103,9 +108,9 @@ space.addEventListener('click', (e) => {
         if (points === 0) {
             gameStop();
             message.innerHTML = 'You Won!';
-            console.log('win');
         }
     } else if (e.target.className == 'shark') {
+        e.target.remove();
         gameStop();
         message.innerHTML = 'You Lost!';
     }

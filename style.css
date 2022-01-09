@@ -93,18 +93,21 @@ body {
     body .game .game-space {
       width: 100%;
       height: 100%; }
-      body .game .game-space .fish {
+      body .game .game-space.active .fish {
         position: relative;
         animation-name: fish;
         animation-duration: 10s;
         animation-timing-function: linear;
         animation-iteration-count: infinite; }
-      body .game .game-space .shark {
+      body .game .game-space.active .shark {
         position: relative;
         animation-name: shark;
         animation-duration: 5s;
         animation-timing-function: linear;
-        animation-iteration-count: infinite; }
+        animation-iteration-count: infinite;
+        transition: all 0.3s; }
+        body .game .game-space.active .shark:hover {
+          transform: scale(1.2); }
   body .pop-up {
     position: fixed;
     width: 40%;

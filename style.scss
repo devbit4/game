@@ -107,19 +107,23 @@ body {
 		.game-space{
 			width: 100%;
 			height: 100%;
-			.fish{
+			&.active .fish{
 				position: relative;
 				animation-name: fish;
 				animation-duration: 10s;
 				animation-timing-function: linear;
 				animation-iteration-count: infinite;
 			}
-			.shark{
+			&.active .shark{
 				position: relative;
 				animation-name: shark;
 				animation-duration: 5s;
 				animation-timing-function: linear;
 				animation-iteration-count: infinite;
+				transition: all 0.3s;
+				&:hover{
+					transform: scale(1.2);
+				}
 
 			}
 
