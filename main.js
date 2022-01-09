@@ -8,7 +8,7 @@ const replay = document.querySelector('.replay');
 const score = document.querySelector('.game-score');
 const fishes = document.querySelectorAll('.fish');
 const message = document.querySelector('.message');
-const lastTime = 5;
+const lastTime = 10;
 let clock;
 let points = 5;
 
@@ -69,6 +69,7 @@ function timer() {
         if (last <= 0) {
             clearInterval(clock);
             time.innerHTML = 'OVER';
+            message.innerHTML = 'You Lost!';
             gameStop();
         }
     }, 1000);
@@ -82,7 +83,8 @@ stop.addEventListener('click', () => {
 function gameStop() {
     pop.classList.remove('hide');
     clearInterval(clock);
-    time.innerHTML = '0:0';
+    time.innerHTML = 'over';
+
     points = 5;
 }
 
@@ -100,7 +102,7 @@ space.addEventListener('click', (e) => {
         score.innerHTML = points;
         if (points === 0) {
             gameStop();
-            message.innerHTML = 'You Win!';
+            message.innerHTML = 'You Won!';
             console.log('win');
         }
     } else if (e.target.className == 'shark') {

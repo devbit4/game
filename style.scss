@@ -37,6 +37,7 @@ body {
 		background: url(img/background.jpg) no-repeat center/cover;
 		position: relative;
 		border-radius: 4px;
+		overflow: hidden;
 		.game-guide {
 			.start {
 				position: absolute;
@@ -106,6 +107,22 @@ body {
 		.game-space{
 			width: 100%;
 			height: 100%;
+			.fish{
+				position: relative;
+				animation-name: fish;
+				animation-duration: 10s;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+			}
+			.shark{
+				position: relative;
+				animation-name: shark;
+				animation-duration: 5s;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+
+			}
+
 		}
 	}
 	.pop-up {
@@ -139,3 +156,11 @@ body {
 		display: none;
 	}
 }
+@keyframes fish {
+    0%   {transform: translateX(-600%);} /*시작위치*/
+    100%  {transform: translateX(600%);} /*도착위치*/
+  }
+  @keyframes shark {
+    0%   {transform: translateX(600%);} /*시작위치*/
+    100%  {transform: translateX(-600%);} /*도착위치*/
+  }
