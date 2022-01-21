@@ -16,6 +16,7 @@ a {
 
 body {
 	cursor: url('img/hook.png'), pointer;
+	position: relative;
 	h1 {
 		color: #fff;
 		margin-bottom: 20px;
@@ -159,12 +160,72 @@ body {
 	.hide {
 		display: none;
 	}
+	.rule{
+		display: none;
+		position: absolute;
+		width: 80%;
+		height: 80vh;
+		background-color: #fff;
+		z-index: 10;
+		border-radius: 20px;
+		text-align: center;
+		h2{
+			font: bold 28px/1 'Press Start 2P';
+			color: blue;
+			margin: 80px 0;
+		}
+		p{
+			font: 18px/1 'Press Start 2P';
+			margin-bottom: 20px;
+			text-align: center;
+		}
+		.hook{
+			margin: 40px auto;
+			position: relative;
+			width: fit-content;
+			img{
+				width: 100px;
+				height: 100px;
+			}
+			.point{
+				width: 20px;
+				height: 20px;
+				background: red;
+				border-radius: 50%;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+		.close{
+			border: none;
+			padding: 10px 20px;
+			border-radius: 20px;
+			font: 18px/1 'Press Start 2P';
+			cursor: pointer;
+
+		}
+	}
+	.ruleBtn{
+		position: absolute;
+		top: 40px;
+		right: 40px;
+		border: none;
+		padding: 10px 20px;
+		border-radius: 20px;
+		font: 18px/1 'Press Start 2P';
+		cursor: pointer;
+		background: transparent;
+		border: 3px solid #ddd;
+		color: #ddd;
+	}
+
 }
 @keyframes fish {
-    0%   {transform: translateX(-600%);} /*시작위치*/
-    100%  {transform: translateX(600%);} /*도착위치*/
+    0%   {transform: translateX(-600%);}
+    100%  {transform: translateX(600%);}
   }
   @keyframes shark {
-    0%   {transform: translateX(600%);} /*시작위치*/
-    100%  {transform: translateX(-600%);} /*도착위치*/
+    0%   {transform: translateX(600%);}
+    100%  {transform: translateX(-600%);}
   }

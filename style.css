@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 * {
   padding: 0;
@@ -15,6 +14,7 @@ a {
 
 body {
   cursor: url("img/hook.png"), pointer;
+  position: relative;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -132,20 +132,66 @@ body {
         transform: scale(1.2); }
   body .hide {
     display: none; }
+  body .rule {
+    display: none;
+    position: absolute;
+    width: 80%;
+    height: 80vh;
+    background-color: #fff;
+    z-index: 10;
+    border-radius: 20px;
+    text-align: center; }
+    body .rule h2 {
+      font: bold 28px/1 'Press Start 2P';
+      color: blue;
+      margin: 80px 0; }
+    body .rule p {
+      font: 18px/1 'Press Start 2P';
+      margin-bottom: 20px;
+      text-align: center; }
+    body .rule .hook {
+      margin: 40px auto;
+      position: relative;
+      width: fit-content; }
+      body .rule .hook img {
+        width: 100px;
+        height: 100px; }
+      body .rule .hook .point {
+        width: 20px;
+        height: 20px;
+        background: red;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0; }
+    body .rule .close {
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font: 18px/1 'Press Start 2P';
+      cursor: pointer; }
+  body .ruleBtn {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font: 18px/1 'Press Start 2P';
+    cursor: pointer;
+    background: transparent;
+    border: 3px solid #ddd;
+    color: #ddd; }
 
 @keyframes fish {
   0% {
     transform: translateX(-600%); }
-  /*시작위치*/
   100% {
-    transform: translateX(600%); }
-  /*도착위치*/ }
+    transform: translateX(600%); } }
 @keyframes shark {
   0% {
     transform: translateX(600%); }
-  /*시작위치*/
   100% {
-    transform: translateX(-600%); }
-  /*도착위치*/ }
+    transform: translateX(-600%); } }
 
 /*# sourceMappingURL=style.css.map */
