@@ -8,7 +8,7 @@ const replay = document.querySelector('.replay');
 const score = document.querySelector('.game-score');
 const fishes = document.querySelectorAll('.fish');
 const message = document.querySelector('.message');
-const lastTime = 6;
+const lastTime = 5;
 let clock;
 let points = 5;
 //character info
