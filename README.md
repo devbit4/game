@@ -21,7 +21,9 @@
 - 어려웠던 점
 
   - spacing fish and shark objects with using position and random number.
+    [math random number](https://www.udacity.com/blog/2021/04/javascript-random-numbers.html#:~:text=Javascript%20creates%20pseudo%2Drandom%20numbers,it%20will%20never%20be%201.)
   - timer using setInterval ->start time bug
+    [setInterval](https://sunnnkim.tistory.com/168)
   - z-index layer bug
   - animation speed difference between fish and shark
   - conflict between transform and transform
