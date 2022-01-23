@@ -8,7 +8,7 @@ const replay = document.querySelector('.replay');
 const score = document.querySelector('.game-score');
 const fishes = document.querySelectorAll('.fish');
 const message = document.querySelector('.message');
-const lastTime = 5;
+const lastTime = 4;
 let clock;
 let points = 5;
 //character info
@@ -39,6 +39,7 @@ start.addEventListener('click', () => {
     stop.classList.remove('stop-hide');
     gameStart();
 });
+// 게임정지
 
 stop.addEventListener('click', () => {
     gameStop();
@@ -97,14 +98,6 @@ function random(min, max) {
 
 
 
-function gameStart() {
-    space.classList.add("active");
-    time.innerHTML = 'Ready';
-    timer();
-    spacing();
-    score.innerHTML = points;
-}
-
 // 타이머
 
 function timer() {
@@ -125,6 +118,15 @@ function timer() {
             gameStop();
         }
     }, 1000);
+}
+
+// 게임시작
+function gameStart() {
+    space.classList.add("active");
+    time.innerHTML = 'Ready';
+    timer();
+    spacing();
+    score.innerHTML = points;
 }
 
 // 게임중지
