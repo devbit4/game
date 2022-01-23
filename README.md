@@ -25,7 +25,10 @@
   - z-index layer bug
   - animation speed difference between fish and shark
   - conflict between transform and transform
-  - 추가 및 수정하고 싶은 사항
+  - initialize timer and score when game stops
+
+- 추가 및 수정하고 싶은 사항
+
   - 시간에 따른 level 수정
   - 라운드 추가
   - 점수 랭킹제
