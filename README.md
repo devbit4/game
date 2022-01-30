@@ -34,9 +34,9 @@
   - conflict between transform and transform
   - initialize timer and score when game stops
 
-- 추가 및 수정하고 싶은 사항
+- 추가 및 수정하고 싶은 사항 (What to more)
 
-  - 시간에 따른 level 수정
+  - 시간에 따른 level 수정 : different timer and level
   - 라운드 추가
-  - 점수 랭킹제
-  - 타 유저와의 게임
+  - 점수 랭킹제 : rankig round
+  - 타 유저와의 게임 : compete with other users
