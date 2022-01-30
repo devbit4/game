@@ -2,6 +2,7 @@
 
 - 소개
 
+  - Fishing game you catch red fish with fish hook within given time
   - 정해진 시간 안에 상어를 피해 빨간 물고기를 잡는 게임
   - 낚시대 초점을 맞추어 물고기를 클릭하면 점수가 누적된다.
 
