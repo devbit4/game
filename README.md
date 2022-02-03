@@ -1,4 +1,5 @@
 # :fish: Project Title: Fishing Game
+![game1](https://user-images.githubusercontent.com/88700967/152277535-e89ef1ed-94c5-490f-ba0d-1852a47f9547.png)
 
 - 소개
 
