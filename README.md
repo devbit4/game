@@ -42,3 +42,4 @@
   - 라운드 추가
   - 점수 랭킹제 : rankig round
   - 타 유저와의 게임 : compete with other users
+  - 협업 시 커밋 메시지 descriptive하게 쓸 것 참고 [commit message]https://chiamakaikeanyi.dev/how-to-write-good-git-commit-messages/
